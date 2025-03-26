@@ -68,3 +68,15 @@ export const themeLightSpaced: DockviewTheme = {
     dndOverlayMounting: 'absolute',
     dndPanelOverlay: 'group',
 };
+
+export const themeShadcnLight: DockviewTheme = {
+    name: 'shadcnLight',
+    className: 'dockview-theme-shadcn-light',
+    gap: 3,
+};
+
+export const themeShadcnDark: DockviewTheme = {
+    name: 'shadcnDark',
+    className: 'dockview-theme-shadcn-dark',
+    gap: 3,
+};

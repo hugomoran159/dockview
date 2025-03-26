@@ -73,12 +73,92 @@
     --dv-scrollbar-background-color: rgba(0, 0, 0, 0.25);
 }
 
+// New Shadcn Light Theme
+@mixin dockview-theme-shadcn-light-mixin {
+    @include dockview-theme-core-mixin();
+    @include dockview-drop-target-no-travel();
+
+    // Using Shadcn Light Theme Colors with CSS variables and fallbacks
+    --dv-group-view-background-color: var(--background, oklch(1 0 0));
+    --dv-tabs-and-actions-container-background-color: var(--secondary, oklch(0.968 0.007 247.896));
+    --dv-tabs-and-actions-container-height: 28px; // Shorter tabs as requested
+    --dv-tabs-and-actions-container-font-size: 12px;
+
+    // Tab colors
+    --dv-activegroup-visiblepanel-tab-background-color: var(--card, oklch(1 0 0));
+    --dv-activegroup-hiddenpanel-tab-background-color: var(--muted, oklch(0.968 0.007 247.896));
+    --dv-inactivegroup-visiblepanel-tab-background-color: var(--card, oklch(1 0 0));
+    --dv-inactivegroup-hiddenpanel-tab-background-color: var(--muted, oklch(0.968 0.007 247.896));
+    --dv-tab-divider-color: var(--card, oklch(1 0 0));
+
+    // Tab text colors
+    --dv-activegroup-visiblepanel-tab-color: var(--foreground, oklch(0.129 0.042 264.695));
+    --dv-activegroup-hiddenpanel-tab-color: var(--muted-foreground, oklch(0.554 0.046 257.417));
+    --dv-inactivegroup-visiblepanel-tab-color: var(--muted-foreground, oklch(0.554 0.046 257.417));
+    --dv-inactivegroup-hiddenpanel-tab-color: var(--muted-foreground, oklch(0.554 0.046 257.417));
+
+    // Borders
+    --dv-separator-border: var(--border, oklch(0.929 0.013 255.508));
+    --dv-paneview-header-border-color: var(--border, oklch(0.929 0.013 255.508));
+    --dv-paneview-active-outline-color: var(--primary, oklch(0.208 0.042 265.755));
+
+    // Sash
+    --dv-sash-color: var(--border, oklch(0.929 0.013 255.508));
+    --dv-active-sash-color: var(--primary, oklch(0.208 0.042 265.755));
+
+    --dv-scrollbar-background-color: var(--muted, rgba(0, 0, 0, 0.15));
+}
+
+// New Shadcn Dark Theme
+@mixin dockview-theme-shadcn-dark-mixin {
+    @include dockview-theme-core-mixin();
+    @include dockview-drop-target-no-travel();
+
+    // Using Shadcn Dark Theme Colors with CSS variables and fallbacks
+    --dv-group-view-background-color: var(--background, oklch(0.129 0.042 264.695));
+    --dv-tabs-and-actions-container-background-color: var(--card, oklch(0.208 0.042 265.755));
+    --dv-tabs-and-actions-container-height: 28px; // Shorter tabs as requested
+    --dv-tabs-and-actions-container-font-size: 12px;
+
+    // Tab colors
+    --dv-activegroup-visiblepanel-tab-background-color: var(--background, oklch(0.129 0.042 264.695));
+    --dv-activegroup-hiddenpanel-tab-background-color: var(--muted, oklch(0.279 0.041 260.031));
+    --dv-inactivegroup-visiblepanel-tab-background-color: var(--background, oklch(0.129 0.042 264.695));
+    --dv-inactivegroup-hiddenpanel-tab-background-color: var(--muted, oklch(0.279 0.041 260.031));
+    --dv-tab-divider-color: var(--background, oklch(0.129 0.042 264.695));
+
+    // Tab text colors
+    --dv-activegroup-visiblepanel-tab-color: var(--foreground, oklch(0.984 0.003 247.858));
+    --dv-activegroup-hiddenpanel-tab-color: var(--muted-foreground, oklch(0.704 0.04 256.788));
+    --dv-inactivegroup-visiblepanel-tab-color: var(--muted-foreground, oklch(0.704 0.04 256.788));
+    --dv-inactivegroup-hiddenpanel-tab-color: var(--muted-foreground, oklch(0.704 0.04 256.788));
+
+    // Borders
+    --dv-separator-border: var(--border, oklch(1 0 0 / 10%));
+    --dv-paneview-header-border-color: var(--border, oklch(1 0 0 / 10%));
+    --dv-paneview-active-outline-color: var(--primary, oklch(0.929 0.013 255.508));
+
+    // Sash
+    --dv-sash-color: var(--border, oklch(1 0 0 / 10%));
+    --dv-active-sash-color: var(--primary, oklch(0.929 0.013 255.508));
+
+    --dv-scrollbar-background-color: var(--muted, rgba(255, 255, 255, 0.15));
+}
+
 .dockview-theme-dark {
     @include dockview-theme-dark-mixin();
 }
 
 .dockview-theme-light {
     @include dockview-theme-light-mixin();
+}
+
+.dockview-theme-shadcn-light {
+    @include dockview-theme-shadcn-light-mixin();
+}
+
+.dockview-theme-shadcn-dark {
+    @include dockview-theme-shadcn-dark-mixin();
 }
 
 .dockview-theme-vs {

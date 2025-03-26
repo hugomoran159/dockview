@@ -7,6 +7,8 @@ import {
     themeLight,
     themeReplit,
     themeVisualStudio,
+    themeShadcnLight,
+    themeShadcnDark,
 } from 'dockview';
 
 export const themeConfig = [
@@ -21,9 +23,18 @@ export const themeConfig = [
         text: '',
     },
     {
+        id: themeShadcnLight,
+        key: '**[Shadcn Light](/demo?theme=shadcnLight)**',
+        text: 'Based on [Shadcn UI](https://ui.shadcn.com) light theme',
+    },
+    {
+        id: themeShadcnDark,
+        key: '**[Shadcn Dark](/demo?theme=shadcnDark)**',
+        text: 'Based on [Shadcn UI](https://ui.shadcn.com) dark theme',
+    },
+    {
         id: themeVisualStudio,
         key: '**[Visual Studio](/demo?theme=visualStudio)**',
-
         text: 'Based on [Visual Studio](https://visualstudio.microsoft.com)',
     },
     {
